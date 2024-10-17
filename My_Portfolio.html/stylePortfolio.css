@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(17, 1, 24);
+    color: rgb(227, 224, 223);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    padding-top: 20px;
+    font-weight: bold;
+    height: 90px;
+    background-color: rgb(6, 17, 42);
+    font-style: inherit;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin:20px;
+}
+nav ul li a{
+    color: rgb(254, 255, 255);
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: rgb(103, 156, 205);
+}
+.left{
+    font-size: 2rem;
+}
+#first_section{
+    display: flex;
+    align-items: center;
+    height: 730px;
+}
+.left_side{
+    width: 700px;
+    margin-left: 180px;
+    font-size: 3.3rem;
+}
+.content{
+    width: 70%;
+    font-size: 3.3rem;
+}
+.red{
+    color: rgb(24, 137, 150);
+    font-weight: 600;
+}
+.right_side{
+    margin-top: 23px;
+    width: fit-content;
+    margin-right: 50px;
+}
+.right_side img{
+    width: 100%;
+    height: 650px;
+}
+#element{
+    color: rgb(139, 63, 206);
+}
+
+/* HORIZONTAL LINE */
+main hr{
+    margin-left: 50px;
+    background-color: black;
+    width: 95%;
+    height: 2px;
+}
+
+/* ABOUT SECTION */
+#about{
+    padding: 80px 0;
+    color: rgb(233, 228, 228);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.row h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(238, 237, 235);
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    width: 60%;
+}
+.about-col-2 p{
+    font-size: xx-large;
+    padding-top: 20px;
+    font-weight: 500;
+    color: gray;
+}
+.tab-Titles{
+    display: flex;
+    margin: 20px 20px;
+}
+.tab-Titles p{
+    color: rgb(219, 215, 221);
+    font-size: xx-large;
+    font-weight: 600;
+}
+.tab-links{
+    margin-right: 100px;
+    cursor: pointer;
+    position: relative;
+    color: black;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: rgb(168, 86, 66);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents li{
+    font-size: large;
+    list-style: none;
+    padding-bottom: 20px;
+}
+.tab-contents span{
+    color: rgb(240, 62, 62);
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* SERVICES */
+.container h1{
+    padding: 30px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+
+

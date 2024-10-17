@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=z-, initial-scale=1.0">
+    <title>Hardik Sahni - Portfolio</title>
+    <link rel="stylesheet" href="stylePortfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Hardik Sahni's Portfolio</div>
+            <div class="right">  
+            <ul>
+                <li><a href="http://127.0.0.1:5500/My_Portfolio.html/myportfolio.html">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="https://github.com/hardik951   ">Projects</a></li>
+                <li><a href="https://www.linkedin.com/in/hardik-sahni-175749320">Contact Us</a></li>
+            </ul>
+            </div>  
+            </nav>
+    </header>
+    <main>
+        <section id="first_section">
+            <div class="left_side">Hii, My name is <span class="red">Hardik Sahni</span>
+                <div class="content">And I am a passionate </div>
+                <span id="element"></span>
+            </div>
+            <div class="right_side">
+                <img src="Img copy.tiff" alt="">
+            </div>
+        </section>
+        <hr>
+        <div id="about">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Img copy.tiff" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1>About Me</h1>
+                        <p>Hi, this is Hardik Sahni from Ambala.<br>
+                            I'm an ambivert who has recently developed interest in coding and love 
+                            for web-development. I am pursuing B.Tech CSE Core       from   SRM KTR. <br> 
+                            I am very keen to learn more regarding my prior mentioned fields and <br> develop 
+                            highly Interactive unique websites. I've worked on many Projects <br>and have envisioned multiple upcoming projects.
+                            <br>Godspeed.</p>
+                            <div class="tab-Titles">
+                                <p class="tab-links active-link"onclick="opentab(skills)" >Skills</p>
+                                <p class="tab-links" onclick="opentab(experience)">Experience</p>
+                                <p class="tab-links" onclick="opentab(education)">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills" >
+                                <ul>
+                                    <li><span>WEB DEVELOPEMT</span><br>html, css, js</li>
+                                    <li><span>UI/UX</span><br>Designing Web pages</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2024-Current</span><br>html, css, js</li>
+                                    <li><span>2024-Current</span><br>C,C++</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2009-2022</span><br>Mind tree school(till 10th grade)</li>
+                                    <li><span>2022-2024</span><br>OPS vidya mandir(12th grade)</li>
+                                    <li><span>2024-2028(current)</span><br>SRM university,Chennai(Btech Cse)</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+        </div>
+        <!---------------Services----------------->
+        <div id="Services">
+            <div class="container">
+                <h1 class="sub-title">Services</h1>
+                <div class="services-list">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Student', 'Freelancer', 'Web developer', ],
+      typeSpeed: 50,
+    });
+</script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
