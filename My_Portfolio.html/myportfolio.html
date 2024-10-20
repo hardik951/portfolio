@@ -28,14 +28,14 @@
                 <span id="element"></span>
             </div>
             <div class="right_side">
-                <img src="IMG_3600.png" alt="">
+                <img src="IMG_3600.png" alt="Hardik Sahni">
             </div>
         </section>
         <hr>
         <div id="about">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="" alt="">
+               
                 </div>
                 <div class="about-col-2">
                     <h1>About Me</h1>
@@ -43,7 +43,7 @@
                         I'm an ambivert who has recently developed interest in coding and love 
                         for web-development. I am pursuing B.Tech CSE Core from SRM KTR. <br> 
                         I am very keen to learn more regarding my prior mentioned fields and <br> 
-                        develop highly Interactive unique websites. I've worked on many Projects <br> 
+                        develop highly interactive unique websites. I've worked on many projects <br> 
                         and have envisioned multiple upcoming projects.
                         <br>Godspeed.</p>
                     <div class="tab-Titles">
@@ -54,7 +54,7 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>WEB DEVELOPMENT</span><br>html, css, js</li> 
-                            <li><span>UI/UX</span><br>Designing Web pages</li>
+                            <li><span>UI/UX</span><br>Designing web pages</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -65,9 +65,9 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2009-2022</span><br>Mind tree school(till 10th grade)</li>
-                            <li><span>2022-2024</span><br>OPS vidya mandir(12th grade)</li>
-                            <li><span>2024-2028(current)</span><br>SRM university, Chennai (Btech CSE)</li>
+                            <li><span>2009-2022</span><br>Mind Tree School (till 10th grade)</li>
+                            <li><span>2022-2024</span><br>OPS Vidya Mandir (12th grade)</li>
+                            <li><span>2024-2028 (current)</span><br>SRM University, Chennai (B.Tech CSE)</li>
                         </ul>
                     </div>
                 </div>
@@ -78,17 +78,16 @@
         <div class="portfolio">
             <div class="project1">
                 <h1>Amazon Clone</h1>
-                <a href="https://github.com/hardik951/amazon_clone.git"><img src="Screenshot 2024-10-19 at 12.17.39 AM.png" alt=""></a>
+                <a href="https://github.com/hardik951/amazon_clone.git"><img src="Screenshot 2024-10-19 at 12.17.39 AM.png" alt="Amazon Clone Screenshot"></a>
             </div>
             <div class="project2">
                 <h1>Weather App</h1>
-                <a href="https://github.com/hardik951/Weather_App.git"><img src="WeatherApp.png" alt=""></a>
+                <a href="https://github.com/hardik951/Weather_App.git"><img src="WeatherApp.png" alt="Weather App Screenshot"></a>
             </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-       
         var typed = new Typed('#element', {
             strings: ['Student', 'Freelancer', 'Web Developer'],
             typeSpeed: 50,
@@ -99,16 +98,12 @@
         let tabcontents = document.getElementsByClassName("tab-contents");
         
         function opentab(tabname, event) { 
-            
             for (let tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            
             for (let tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
-            
-
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
