@@ -157,40 +157,38 @@ main hr{
     grid-gap: 40px;
     margin-top: 50px;
 }
-.portfolio{
-    height: 700px;
-     display: flex;
+
+/*----------PORTFOLIO------------*/
+
+.portfolio {
+    margin-top: 100px;
+    display: flex;
     flex-direction: row; 
-}
-.Projects{
-    font-size: 60px;
-    height: 400px;
-}
-.project1{
-    height: 550px;
-    width: 700px;
-    margin-top: 200px;
-    border: 1px solid white;
-    /* display: flex; */
-    margin-right: 10px;
-    font-size: xx-large ;
-    font-weight: bold;
-    /* background-image: url('Screenshot\ 2024-10-19\ at\ 12.17.39\ AM.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;  */
-}
-.project1 img{
-    height: 100px;
-    width: 100px;
+    justify-content: space-between; /* or center, depending on your layout */
+    align-items: flex-start; /* or center */
 }
 
-.project2{
-    border: 1px solid white;
-    height: 200px;
-    width: 700px;
-    margin-top: 100px;
-    /* margin-right: 200px; */
-    display: flex;
-    
+
+.project1, .project2 {
+    flex: 1; /* This allows them to grow and shrink as needed */
+    min-width: 300px; /* Prevents them from getting too small */
 }
+.project1{
+    margin-left: 70px;
+}
+
+.project1 img, .project2 img {
+    max-width: 80%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.projects {
+    font-size: 3.75rem; /* 60px */
+}
+
+
+.project1:hover, .project2:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.3s; /* Smooth transition */
+}
+

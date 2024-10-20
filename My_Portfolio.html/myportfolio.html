@@ -46,9 +46,9 @@
                             highly Interactive unique websites. I've worked on many Projects <br>and have envisioned multiple upcoming projects.
                             <br>Godspeed.</p>
                             <div class="tab-Titles">
-                                <p class="tab-links active-link"onclick="opentab(skills)" >Skills</p>
-                                <p class="tab-links" onclick="opentab(experience)">Experience</p>
-                                <p class="tab-links" onclick="opentab(education)">Education</p>
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>                                
                             </div>
                             <div class="tab-contents active-tab" id="skills" >
                                 <ul>
@@ -59,7 +59,7 @@
                             <div class="tab-contents" id="experience">
                                 <ul>
                                     <li><span>2024-Current</span><br>html, css, js</li>
-                                    <li><span>2024-Current</span><br>C,C++</li>
+                                    <li><span>2024-Current</span><br>C Language</li>
                                 </ul>
                             </div>
                             <div class="tab-contents" id="education">
@@ -72,39 +72,47 @@
                     </div>
                 </div>
         </div>
-        <!---------------My Work----------------->
-            <div class="portfolio">
-                    <h1 class="Projects">Projects</h1>
-                    <h1>Amazon Clone</h1>
-                    <div class="project1">
-                        <img src="Screenshot 2024-10-19 at 12.17.39 AM.png" alt="">
-                    </div>
-                    <div class="project2">Weather App</div>
-                </div>
+     <!---------------My Work----------------->
+     <h1 class="projects">Projects</h1>
+     <div class="portfolio">
+             <div class="project1">
+                 <h1>Amazon Clone</h1>
+                 <img src="Screenshot 2024-10-19 at 12.17.39 AM.png" alt="">
+             </div>
+             <div class="project2">
+                <h1>Weather App</h1>
+                <a href="http://127.0.0.1:5500/weather.html/Weather.html/main.html"><img src="WeatherApp.png" alt=""></a>
+             </div>
+         </div>
          
     </main>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-    var typed = new Typed('#element', {
-      strings: ['Student', 'Freelancer', 'Web developer', ],
-      typeSpeed: 50,
-    });
-</script>
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-    
+        // Typed.js initialization
+        var typed = new Typed('#element', {
+            strings: ['Student', 'Freelancer', 'Web Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        let tablinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
+        
         function opentab(tabname) {
+            // Remove active class from all tab links
             for (let tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
+            // Remove active class from all tab contents
             for (let tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
             
+            // Add active class to the clicked tab link and corresponding content
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
+    
 </body>
 </html>
