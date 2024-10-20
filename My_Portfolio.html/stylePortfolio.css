@@ -1,3 +1,5 @@
+@media screen {
+    
 *{
     margin: 0;
     padding: 0;
@@ -193,5 +195,49 @@ main hr{
     transform: scale(1.05); /* Slightly enlarge on hover */
     transition: transform 0.3s; /* Smooth transition */
 }
+}
+@media (max-width: 768px) {
+    #first_section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .left_side {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .right_side {
+        margin-right: 0;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
 
-
+@media (max-width: 480px) {
+    .left_side {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+    .right_side img {
+        max-width: 100%;
+    }
+    .projects {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    .project1, .project2 {
+        margin-left: 0;
+    }
+}
