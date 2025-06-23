@@ -1,112 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Hardik Sahni - Portfolio</title>
-    <link rel="stylesheet" href="stylePortfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardik Sahni - Portfolio</title>
+  <link rel="stylesheet" href="stylePortfolio.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="left">Hardik Sahni's Portfolio</div>
-            <div class="right">  
-                <ul>
-                    <li><a href="myportfolio.html">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="https://github.com/hardik951">Projects</a></li> 
-                    <li><a href="https://www.linkedin.com/in/hardik-sahni-175749320">Contact Us</a></li>
-                </ul>
-            </div>  
-        </nav>
-    </header>
-    <main>
-        <section id="first_section">
-            <div class="left_side">Hii, My name is <span class="red">Hardik Sahni</span>
-                <div class="content">And I am a passionate </div>
-                <span id="element"></span>
-            </div>
-            <div class="right_side">
-                <img src="IMG_3600.png" alt="Hardik Sahni">
-            </div>
-        </section>
-        <hr>
-        <div id="about">
-            <div class="row">
-                <div class="about-col-1">
-               
-                </div>
-                <div class="about-col-2">
-                    <h1>About Me</h1>
-                    <p>Hi, this is Hardik Sahni from Ambala.<br>
-                        I'm an ambivert who has recently developed interest in coding and love 
-                        for web-development. I am pursuing B.Tech CSE Core from SRM KTR. <br> 
-                        I am very keen to learn more regarding my prior mentioned fields and <br> 
-                        develop highly interactive unique websites. I've worked on many projects <br> 
-                        and have envisioned multiple upcoming projects.
-                        <br>Godspeed.</p>
-                    <div class="tab-Titles">
-                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p> 
-                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p> 
-                        <p class="tab-links" onclick="opentab('education', event)">Education</p> 
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>WEB DEVELOPMENT</span><br>html, css, js</li> 
-                            <li><span>UI/UX</span><br>Designing web pages</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2024-Current</span><br>html, css, js</li>
-                            <li><span>2024-Current</span><br>C Language</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2009-2022</span><br>Mind Tree School (till 10th grade)</li>
-                            <li><span>2022-2024</span><br>OPS Vidya Mandir (12th grade)</li>
-                            <li><span>2024-2028 (current)</span><br>SRM University, Chennai (B.Tech CSE)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="left">Hardik Sahni's Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="myportfolio.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="https://www.linkedin.com/in/hardik-sahni-175749320" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+  <section id="first_section">
+  <div class="left_side">
+    <h6>Hi, I'm <span class="red">Hardik Sahni</span></h6>
+    <h6>And I am a passionate</h6>
+    <h6 id="element"></h6>
+     <div class="buttons">
+      <button class="btn"><a href="https://drive.google.com/file/d/1ewzlzhI3gaFJuBnSTltnIpzSXxOngkbE/view?usp=sharing">Download Resume</a></button>
+      <button class="btn">Visit Github</button>
+    </div>
+  </div>
+  <div class="right_side">
+    <img src="IMG_3936.JPG" alt="Hardik Sahni Portrait" />
+  </div>
+</section>
+
+    <hr>
+
+<section id="about" class="about-section reveal">
+  <h2 class="section-title">About Me</h2>
+
+  <p class="about-intro fade-in">
+    I'm <strong>Hardik Sahni</strong> from Ambala — an ambivert who thrives both in peaceful moments and creative conversations.
+    I stumbled into coding out of curiosity, and it quickly became a passion. Web development lets me turn ideas into interactive, impactful digital experiences.
+    <br><br>
+    Currently pursuing a <strong>B.Tech in Computer Science</strong> at <strong>SRM University, Chennai</strong>, I immerse myself in technology, creativity, and problem-solving.
+    <br><br>
+    I believe in the power of learning, evolving, and building with intent. <strong>Let's create something amazing. 🚀</strong>
+  </p>
+
+  <div class="about-wrapper">
+    <div class="about-image slide-in-left">
+      <img src="IMG_3936.JPG" alt="Hardik Sahni" class="profile-img">
+    </div>
+
+    <div class="about-cards slide-in-right">
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+      </div>
+
+      <!-- SKILLS TAB -->
+      <div class="tab-contents active-tab" id="skills">
+        <div class="about-card">
+          <h3>💡 Skills</h3>
+          <ul>
+            <li><span>Web Development</span><br>HTML, CSS, JavaScript, DOM</li>
+            <li><span>UI/UX</span><br>Designing modern, responsive interfaces</li>
+            <li><span>React.js (Learning)</span><br>Component-based architecture</li>
+          </ul>
         </div>
-        <!-- My Work -->
-        <h1 class="projects">Projects</h1>
-        <div class="portfolio">
-            <div class="project1">
-                <h1>Amazon Clone</h1>
-                <a href="https://github.com/hardik951/amazon_clone.git"><img src="Screenshot 2024-10-19 at 12.17.39 AM.png" alt="Amazon Clone Screenshot"></a>
-            </div>
-            <div class="project2">
-                <h1>Weather App</h1>
-                <a href="https://github.com/hardik951/Weather_App.git"><img src="WeatherApp.png" alt="Weather App Screenshot"></a>
-            </div>
+      </div>
+
+      <!-- EXPERIENCE TAB -->
+      <div class="tab-contents" id="experience">
+        <div class="about-card">
+          <h3>📚 Experience</h3>
+          <ul>
+            <li><span>2024 - Present</span><br>Building real-world projects using HTML, CSS, and JavaScript</li>
+            <li><span>2024 - Present</span><br>Solving logic-based problems using C</li>
+          </ul>
         </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Student', 'Freelancer', 'Web Developer'],
-            typeSpeed: 50,
-        });
-    </script>
-    <script>
-        let tablinks = document.getElementsByClassName("tab-links");
-        let tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname, event) { 
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+      </div>
+
+      <!-- EDUCATION TAB -->
+      <div class="tab-contents" id="education">
+        <div class="about-card">
+          <h3>🎓 Education</h3>
+          <ul>
+            <li><span>2009 - 2022</span><br>Mind Tree School (10th Grade)</li>
+            <li><span>2022 - 2024</span><br>OPS Vidya Mandir (12th Grade)</li>
+            <li><span>2024 - 2028</span><br>SRM University, Chennai (B.Tech CSE)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<h1 class="projects">Projects</h1>
+<div class="portfolio">
+  <div class="project1">
+    <h1>Amazon Clone</h1>
+    <a href="https://github.com/hardik951/amazon_clone.git">
+      <img src="amazon.png" alt="Amazon Clone Screenshot">
+    </a>
+  </div>
+
+  <div class="project2">
+    <h1>Weather App</h1>
+    <a href="https://github.com/hardik951/Weather_App.git">
+      <img src="weather.png" alt="Weather App Screenshot">
+    </a>
+  </div>
+
+  <div class="project3">
+    <h1>To-Do App</h1>
+    <a href="https://github.com/hardik951/todo-app">
+      <img src="todo.png" alt="To-Do App Screenshot">
+    </a>
+  </div>
+
+  <div class="project4">
+    <h1>Calculator</h1>
+    <a href="https://github.com/hardik951/calculator">
+      <img src="calc.png" alt="Calculator Screenshot">
+    </a>
+  </div>
+</div>
+
+</main>
+
+  <!-- Typed.js for typing animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Typed.js initialization
+var typed = new Typed('#element', {
+  strings: ['Student', 'Freelancer', 'Web Developer'],
+  typeSpeed: 50,
+  backSpeed: 30,
+  loop: true
+});
+
+    // Tab switching functionality
+    function opentab(tabname, event) {
+      const tablinks = document.getElementsByClassName("tab-links");
+      const tabcontents = document.getElementsByClassName("tab-contents");
+
+      Array.from(tablinks).forEach(link => link.classList.remove("active-link"));
+      Array.from(tabcontents).forEach(content => content.classList.remove("active-tab"));
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
 </body>
 </html>
