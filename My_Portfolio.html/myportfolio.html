@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hardik Sahni - Portfolio</title>
   <link rel="stylesheet" href="stylePortfolio.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -105,36 +107,47 @@
 </section>
 <hr>
 
-<h1 class="projects">Projects</h1>
+<div class="projects-container">
+  <h1 class="projects">Projects</h1>
+</div>
 <div class="portfolio">
-  <div class="project1">
-    <h1>FITVERSE</h1>
-    <a href="https://fitverse-ai.vercel.app/ ">
-      <img src="fitverse.png" alt="">
-    </a>
+  <div class="project-card">
+    <h2 class="project-title">FITVERSE</h2>
+    <img src="fitverse.png" alt="FITVERSE Project">
+    <div class="button-group">
+      <a href="https://fitverse-ai.vercel.app/" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/fitverse" class="btn btn-github">GitHub</a>
+    </div>
   </div>
 
-  <div class="project2">
-    <h1>Weather App</h1>
-    <a href="https://codegenie-7650c.web.app">
-      <img src="codegenie.png" alt="">
-    </a>
+  <div class="project-card">
+    <h2 class="project-title">Weather App</h2>
+    <img src="codegenie.png" alt="Weather App Project">
+    <div class="button-group">
+      <a href="https://codegenie-7650c.web.app" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/weather-app" class="btn btn-github">GitHub</a>
+    </div>
   </div>
 
-  <div class="project3">
-    <h1>amazon</h1>
-    <a href="">
-      <img src="amazon.png" alt="">
-    </a>
+  <div class="project-card">
+    <h2 class="project-title">Amazon Clone</h2>
+    <img src="amazon.png" alt="Amazon Clone Project">
+    <div class="button-group">
+      <a href="#" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/amazon-clone" class="btn btn-github">GitHub</a>
+    </div>
   </div>
 
-  <div class="project4">
-    <h1>Weather-App</h1>
-    <a href="">
-      <img src="calc.png" alt="Calculator Screenshot">
-    </a>
+  <div class="project-card">
+    <h2 class="project-title">Calculator</h2>
+    <img src="calc.png" alt="Calculator Project">
+    <div class="button-group">
+      <a href="#" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/calculator" class="btn btn-github">GitHub</a>
+    </div>
   </div>
 </div>
+
 <hr>
 <section id="experience_section">
   <h1 class="section-heading">Experience & Involvement</h1>
@@ -191,32 +204,98 @@
 
   </div>
 </section>
+<hr>
+<section id="certifications">
+  <h2 class="section-heading">Achievements & Certifications</h2>
+  <div class="achievement-grid">
+    <div class="achievement-card">
+      <h3>Responsive Web Design - HTML, CSS & JavaScript</h3>
+      <p class="issuer">By: CodeAcademy</p>
+      <p class="date">Issued: Jan 12, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>Full Stack Development Bootcamp</h3>
+      <p class="issuer">By: DevMountains Institute</p>
+      <p class="date">Issued: Mar 22, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>NPTEL: Fundamentals of Object-Oriented Programming</h3>
+      <p class="issuer">By: IIT Madras / NPTEL</p>
+      <p class="date">Issued: May 5, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>HackBattle 2024 - Top 10 Team</h3>
+      <p class="issuer">By: TeamX & CodeConquest</p>
+      <p class="date">Issued: Jun 3, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+  </div>
+</section>
+<hr>
+<section id="contact_section">
+  <div class="contact-card">
+    <h2 class="contact-title">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn contact-btn">Send</button>
+    </form>
+  </div>
+
+  <div class="footer-icons">
+    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+
+  <p class="footer-copy">© 2025 Hardik Sahni · Built with ❤️</p>
+</section>
 
 
 </main>
 
-  <!-- Typed.js for typing animation -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    // Typed.js initialization
-var typed = new Typed('#element', {
-  strings: ['Student', 'Freelancer', 'Web Developer'],
-  typeSpeed: 50,
-  backSpeed: 30,
-  loop: true
-});
+<!-- Typed.js for typing animation -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  // Typed.js initialization
+  var typed = new Typed('#element', {
+    strings: ['Student', 'Freelancer', 'Web Developer'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
 
-    // Tab switching functionality
-    function opentab(tabname, event) {
-      const tablinks = document.getElementsByClassName("tab-links");
-      const tabcontents = document.getElementsByClassName("tab-contents");
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
 
-      Array.from(tablinks).forEach(link => link.classList.remove("active-link"));
-      Array.from(tabcontents).forEach(content => content.classList.remove("active-tab"));
+<script>
+  // Tab switching functionality
+  function opentab(tabname, event) {
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
 
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-  </script>
+    Array.from(tablinks).forEach(link => link.classList.remove("active-link"));
+    Array.from(tabcontents).forEach(content => content.classList.remove("active-tab"));
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
 </body>
 </html>
