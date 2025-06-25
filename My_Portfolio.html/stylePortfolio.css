@@ -45,7 +45,7 @@
   }
 
   .left {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   #first_section {
@@ -103,7 +103,7 @@
   .right_side {
     width: 50%;
     text-align: right;
-  }
+  } 
 
   main hr {
     margin: 40px auto;
@@ -123,12 +123,15 @@
     display: none;
   }
 
+  hr{
+    color: rgb(183, 156, 207);
+  }
 
   .section-title {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 30px;
-    color: rgb(24, 137, 150);
+    color: white;
     animation: popUp 1s ease-in-out;
   }
 
@@ -198,7 +201,7 @@
     background: rgb(139, 63, 206);
     transition: 0.4s;
   }
-
+  
   a{
   text-decoration: none;
   color: white;
@@ -349,8 +352,10 @@
   /* Portfolio Section     */
   /* --------------------- */
   .projects {
-    font-size: 3rem;
-    margin: 100px 0 30px 100px;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .portfolio {
@@ -409,5 +414,76 @@
       max-width: 500px;
     }
   }
+}
+#experience_section {
+  padding: 70px 40px;
+  background-color: rgb(17, 1, 24);
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
 
+.section-heading {
+  font-size: 3.5rem; /* Increased from 3.2rem */
+  font-weight: bold;
+  margin-bottom: 60px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.exp-role {
+  background-color: #1f1f2e;
+  border-left: 5px solid rgb(139, 63, 206);
+  border-radius: 12px;
+  padding: 30px 35px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.exp-role:hover {
+  transform: translateY(-6px);
+}
+
+.role-title {
+  color: rgb(139, 63, 206);
+  font-size: 2rem; /* Increased */
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.role-org {
+  font-size: 1.15rem;
+  color: #ccc;
+  margin-bottom: 2px;
+}
+
+.duration {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.role-details {
+  list-style-type: disc;
+  padding-left: 22px;
+  color: #ddd;
+  font-size: 1.15rem; /* Slightly larger */
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
 }
