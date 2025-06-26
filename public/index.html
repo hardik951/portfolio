@@ -1,89 +1,411 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardik Sahni - Portfolio</title>
+  <link rel="stylesheet" href="stylePortfolio.css">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.9.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.9.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.9.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+  <div class="left">Hardik Sahni's Portfolio</div>
+  <div class="right">
+  <ul>
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+   <li><a href="#experience_section" class="nav-link">Services</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#contact_section" class="nav-link">Contact</a></li>
+  </ul>
+  </div>
+</nav>
+  </header>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <!-- Hero Section -->
+  <main>
+  <section id="first_section" id="home">
+  <div class="left_side">
+    <h6>Hi, I'm <span class="red">Hardik Sahni</span></h6>
+    <h6>And I am a passionate</h6>
+    <h6 id="element"></h6>
+     <div class="buttons">
+      <button class="btn"><a href="https://drive.google.com/file/d/1ewzlzhI3gaFJuBnSTltnIpzSXxOngkbE/view?usp=sharing">Download Resume</a></button>
+      <button class="btn"><a href="https://github.com/hardik951">Visit Github</a></button>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </div>
+  <div class="right_side">
+    <img src="personal.JPG" alt="Hardik Sahni Portrait" />
+  </div>
+</section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <hr>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
+<section id="about" class="about-section reveal" id="about">
+
+<div style="text-align: center;">
+  <h2 class="section-title">About Me</h2>
+</div>
+
+  <p class="about-intro fade-in">
+    I'm <strong>Hardik Sahni</strong> from Ambala — an ambivert who thrives both in peaceful moments and creative conversations.
+    I stumbled into coding out of curiosity, and it quickly became a passion. Web development lets me turn ideas into interactive, impactful digital experiences.
+    <br><br>
+    Currently pursuing a <strong>B.Tech in Computer Science</strong> at <strong>SRM University, Chennai</strong>, I immerse myself in technology, creativity, and problem-solving.
+    <br><br>
+    I believe in the power of learning, evolving, and building with intent. <strong>Let's create something amazing. 🚀</strong>
+  </p>
+
+  <div class="about-wrapper">
+    <div class="about-image slide-in-left">
+      <img src="personal.JPG" alt="Hardik Sahni" class="profile-img">
+    </div>
+
+    <div class="about-cards slide-in-right">
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+      </div>
+
+      <!-- SKILLS TAB -->
+      <div class="tab-contents active-tab" id="skills">
+        <div class="about-card">
+          <h3>💡 Skills</h3>
+          <ul>
+            <li><span>Languages</span><br>C/C++, Java, Python, JavaScript, TypeScript, SQL</li>
+            <li><span>Technologies & Tools:</span><br>html, css, tailwind css</li>
+            <li><span>Databases: </span><br>SQL, MongoDB</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE TAB -->
+      <div class="tab-contents" id="experience">
+        <div class="about-card">
+          <h3>📚 Experience</h3>
+          <ul>
+            <li><span>Aug 2024 – Oct 2024</span><br>Learned HTML, CSS, and JavaScript fundamentals, with hands-on practice through small tasks and components.</li>
+            <li><span>Oct 2024 – Dec 2024</span><br>Built beginner-level real-world projects such as the Amazon Clone and Weather App to strengthen practical skills.</li>
+            <li><span>Jan 2025 – May 2025</span><br>Worked on the FITVERSE project, focusing on building its base UI template, defining structure, and creating a roadmap for future development.</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDUCATION TAB -->
+      <div class="tab-contents" id="education">
+        <div class="about-card">
+          <h3>🎓 Education</h3>
+          <ul>
+            <li><span>2009 - 2022</span><br>Mind Tree School (10th Grade)</li>
+            <li><span>2022 - 2024</span><br>OPS Vidya Mandir (12th Grade)</li>
+            <li><span>2024 - 2028</span><br>SRM University, Chennai (B.Tech CSE)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<section id="projects">
+<div class="projects-container">
+  <h1 class="projects">Projects</h1>
+</div>
+<div class="portfolio">
+  <div class="project-card">
+    <h2 class="project-title">FITVERSE</h2>
+    <img src="fitverse.png" alt="FITVERSE Project">
+    <div class="button-group">
+      <a href="https://fitverse-ai.vercel.app/" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/fitverse" class="btn btn-github">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h2 class="project-title">CODE-GENIE</h2>
+    <img src="codegenie.png" alt="Weather App Project">
+    <div class="button-group">
+      <a href="https://codegenie-7650c.web.app" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/weather-app" class="btn btn-github">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h2 class="project-title">AMAZON-CLONE</h2>
+    <img src="amazon.png" alt="Amazon Clone Project">
+    <div class="button-group">
+      <a href="#" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/amazon-clone" class="btn btn-github">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h2 class="project-title">WEATHER-APP</h2>
+    <img src="weather-app.png" alt="Weather App">
+    <div class="button-group">
+      <a href="#" class="btn btn-live">Live Demo</a>
+      <a href="https://github.com/yourusername/calculator" class="btn btn-github">GitHub</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr>
+
+<section id="experience_section" id="services">
+  <h1 class="section-heading">Experience & Involvement</h1>
+
+  <div class="experience-grid">
+
+    <div class="exp-role">
+      <h2 class="role-title">Student Placement Cell</h2>
+      <p class="role-org">SRM Institute of Science and Technology</p>
+      <p class="duration">September 2023 – Present</p>
+      <ul class="role-details">
+        <li>Coordinated placement sessions and peer mentoring programs.</li>
+        <li>Organized mock interviews and resume-building workshops.</li>
+        <li>Facilitated communication between students and recruiters.</li>
+        <li>Maintained regular follow-ups with faculty and training partners.</li>
+      </ul>
+    </div>
+
+    <div class="exp-role">
+      <h2 class="role-title">Discipline Committee (DSA)</h2>
+      <p class="role-org">Directorate of Student Affairs | SRM</p>
+      <p class="duration">September 2023 – Present</p>
+      <ul class="role-details">
+        <li>Helped maintain order and discipline during university events.</li>
+        <li>Assisted in pre-event planning and student coordination.</li>
+        <li>Monitored crowd management and entry protocols effectively.</li>
+        <li>Represented the student body in DSA’s official policy briefings.</li>
+      </ul>
+    </div>
+
+    <div class="exp-role">
+      <h2 class="role-title">Technical Member – SRMKZILLA</h2>
+      <p class="role-org">Mozilla Campus Club @ SRM</p>
+      <p class="duration">March 2023 – Present</p>
+      <ul class="role-details">
+        <li>Worked on multiple frontend projects using React and HTML/CSS.</li>
+        <li>Assisted in organizing open source workshops and GitHub sessions.</li>
+        <li>Contributed to technical documentation and codebase cleanup.</li>
+        <li>Engaged in peer-to-peer mentoring and tech community building.</li>
+      </ul>
+    </div>
+
+    <div class="exp-role">
+      <h2 class="role-title">Event Volunteering</h2>
+      <p class="role-org">Tech & Cultural Events | SRM University</p>
+      <p class="duration">2022 – Present</p>
+      <ul class="role-details">
+        <li>Supported multiple national-level events in tech, culture, and innovation.</li>
+        <li>Managed registration desks and real-time logistics.</li>
+        <li>Provided backend support during hackathons and coding marathons.</li>
+        <li>Collaborated with cross-functional student teams under high-pressure timelines.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<hr>
+<section id="certifications">
+  <h2 class="section-heading">Achievements & Certifications</h2>
+  <div class="achievement-grid">
+    <div class="achievement-card">
+      <h3>Responsive Web Design - HTML, CSS & JavaScript</h3>
+      <p class="issuer">By: CodeAcademy</p>
+      <p class="date">Issued: Jan 12, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>Full Stack Development Bootcamp</h3>
+      <p class="issuer">By: DevMountains Institute</p>
+      <p class="date">Issued: Mar 22, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>NPTEL: Fundamentals of Object-Oriented Programming</h3>
+      <p class="issuer">By: IIT Madras / NPTEL</p>
+      <p class="date">Issued: May 5, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="achievement-card">
+      <h3>HackBattle 2024 - Top 10 Team</h3>
+      <p class="issuer">By: TeamX & CodeConquest</p>
+      <p class="date">Issued: Jun 3, 2024</p>
+      <a href="#" class="cert-btn" target="_blank">View Certificate</a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section id="contact_section">
+  <div class="contact-card">
+    <h2 class="contact-title">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn contact-btn">Send</button>
+    </form>
+  </div>
+
+  <div class="footer-icons">
+    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+
+  <p class="footer-copy">© 2025 Hardik Sahni · Built with ❤️</p>
+</section>
+<script src="app.js"></script>
+</body>
+</main>
+
+ <!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  // Typed.js initialization
+  var typed = new Typed('#element', {
+    strings: ['Student', 'Freelancer', 'Web Developer'],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+
+  // GSAP animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".left_side", {
+    x: -100,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".left_side",
+      start: "top 80%",
+    }
+  });
+
+  gsap.from(".right_side", {
+    x: 100,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".right_side",
+      start: "top 80%",
+    }
+  });
+
+  gsap.from(".about-image", {
+    x: -100,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".about-image",
+      start: "top 85%",
+    }
+  });
+
+  gsap.from(".about-cards", {
+    x: 100,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".about-cards",
+      start: "top 85%",
+    }
+  });
+
+  gsap.utils.toArray(".exp-role").forEach((card, i) => {
+    gsap.from(card, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      delay: i * 0.1,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+      }
+    });
+  });
+
+  gsap.utils.toArray(".project-card").forEach((card, i) => {
+    gsap.from(card, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: i * 0.1,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+      }
+    });
+  });
+
+  gsap.utils.toArray(".achievement-card").forEach((card, i) => {
+    gsap.from(card, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: i * 0.1,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+      }
+    });
+  });
+
+  gsap.from(".contact-card", {
+    scale: 0.9,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".contact-card",
+      start: "top 85%"
+    }
+  });
+
+  // Tab switcher
+  function opentab(tabname, event) {
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+
+    Array.from(tablinks).forEach(link => link.classList.remove("active-link"));
+    Array.from(tabcontents).forEach(content => content.classList.remove("active-tab"));
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+<script>
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
-    </script>
-  </body>
-</html>
+    }
+  });
+});
+</script>
+
